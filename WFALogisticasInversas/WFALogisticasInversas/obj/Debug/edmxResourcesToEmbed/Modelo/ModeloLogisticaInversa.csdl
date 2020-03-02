@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A3F19C_InventariosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_A3F19C_InventariosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dettarimasskus" EntityType="DB_A3F19C_InventariosModel.dettarimasskus" />
+    <EntitySet Name="logisticainversa" EntityType="DB_A3F19C_InventariosModel.logisticainversa" />
+    <EntitySet Name="origenlogistica" EntityType="DB_A3F19C_InventariosModel.origenlogistica" />
+    <EntitySet Name="skus" EntityType="DB_A3F19C_InventariosModel.skus" />
+    <EntitySet Name="skusbenavides" EntityType="DB_A3F19C_InventariosModel.skusbenavides" />
+    <EntitySet Name="skusinventarios" EntityType="DB_A3F19C_InventariosModel.skusinventarios" />
+    <EntitySet Name="statuslogisticasinversas" EntityType="DB_A3F19C_InventariosModel.statuslogisticasinversas" />
+    <EntitySet Name="statustarimas" EntityType="DB_A3F19C_InventariosModel.statustarimas" />
+    <EntitySet Name="tarimas" EntityType="DB_A3F19C_InventariosModel.tarimas" />
+    <EntitySet Name="uom" EntityType="DB_A3F19C_InventariosModel.uom" />
+    <AssociationSet Name="dettarimasskus_skus_fk" Association="DB_A3F19C_InventariosModel.dettarimasskus_skus_fk">
+      <End Role="skus" EntitySet="skus" />
+      <End Role="dettarimasskus" EntitySet="dettarimasskus" />
+    </AssociationSet>
+    <AssociationSet Name="dettarimasskus_tarimas_fk" Association="DB_A3F19C_InventariosModel.dettarimasskus_tarimas_fk">
+      <End Role="tarimas" EntitySet="tarimas" />
+      <End Role="dettarimasskus" EntitySet="dettarimasskus" />
+    </AssociationSet>
+    <AssociationSet Name="logisticainversa_origenlogistica_fk" Association="DB_A3F19C_InventariosModel.logisticainversa_origenlogistica_fk">
+      <End Role="origenlogistica" EntitySet="origenlogistica" />
+      <End Role="logisticainversa" EntitySet="logisticainversa" />
+    </AssociationSet>
+    <AssociationSet Name="logisticainversa_statuslogisticasinversas_fk" Association="DB_A3F19C_InventariosModel.logisticainversa_statuslogisticasinversas_fk">
+      <End Role="statuslogisticasinversas" EntitySet="statuslogisticasinversas" />
+      <End Role="logisticainversa" EntitySet="logisticainversa" />
+    </AssociationSet>
+    <AssociationSet Name="tarimas_logisticainversa_fk" Association="DB_A3F19C_InventariosModel.tarimas_logisticainversa_fk">
+      <End Role="logisticainversa" EntitySet="logisticainversa" />
+      <End Role="tarimas" EntitySet="tarimas" />
+    </AssociationSet>
+    <AssociationSet Name="skus_uom_fk" Association="DB_A3F19C_InventariosModel.skus_uom_fk">
+      <End Role="uom" EntitySet="uom" />
+      <End Role="skus" EntitySet="skus" />
+    </AssociationSet>
+    <AssociationSet Name="skusbenavides_skus_fk" Association="DB_A3F19C_InventariosModel.skusbenavides_skus_fk">
+      <End Role="skus" EntitySet="skus" />
+      <End Role="skusbenavides" EntitySet="skusbenavides" />
+    </AssociationSet>
+    <AssociationSet Name="skusinventarios_skus_fk" Association="DB_A3F19C_InventariosModel.skusinventarios_skus_fk">
+      <End Role="skus" EntitySet="skus" />
+      <End Role="skusinventarios" EntitySet="skusinventarios" />
+    </AssociationSet>
+    <AssociationSet Name="tarimas_statustarimas_fk" Association="DB_A3F19C_InventariosModel.tarimas_statustarimas_fk">
+      <End Role="statustarimas" EntitySet="statustarimas" />
+      <End Role="tarimas" EntitySet="tarimas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="dettarimasskus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="tarimas_Id" Type="Int32" Nullable="false" />
+    <Property Name="skus_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="skus" Relationship="DB_A3F19C_InventariosModel.dettarimasskus_skus_fk" FromRole="dettarimasskus" ToRole="skus" />
+    <NavigationProperty Name="tarimas" Relationship="DB_A3F19C_InventariosModel.dettarimasskus_tarimas_fk" FromRole="dettarimasskus" ToRole="tarimas" />
+  </EntityType>
+  <EntityType Name="logisticainversa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Folio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaAlta" Type="DateTime" Precision="0" />
+    <Property Name="origenlogistica_id" Type="Int32" Nullable="false" />
+    <Property Name="statuslogisticasinversas_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="origenlogistica" Relationship="DB_A3F19C_InventariosModel.logisticainversa_origenlogistica_fk" FromRole="logisticainversa" ToRole="origenlogistica" />
+    <NavigationProperty Name="statuslogisticasinversas" Relationship="DB_A3F19C_InventariosModel.logisticainversa_statuslogisticasinversas_fk" FromRole="logisticainversa" ToRole="statuslogisticasinversas" />
+    <NavigationProperty Name="tarimas" Relationship="DB_A3F19C_InventariosModel.tarimas_logisticainversa_fk" FromRole="logisticainversa" ToRole="tarimas" />
+  </EntityType>
+  <EntityType Name="origenlogistica">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomenclatura" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="logisticainversa" Relationship="DB_A3F19C_InventariosModel.logisticainversa_origenlogistica_fk" FromRole="origenlogistica" ToRole="logisticainversa" />
+  </EntityType>
+  <EntityType Name="skus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codigobarras" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uom_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dettarimasskus" Relationship="DB_A3F19C_InventariosModel.dettarimasskus_skus_fk" FromRole="skus" ToRole="dettarimasskus" />
+    <NavigationProperty Name="uom" Relationship="DB_A3F19C_InventariosModel.skus_uom_fk" FromRole="skus" ToRole="uom" />
+    <NavigationProperty Name="skusbenavides" Relationship="DB_A3F19C_InventariosModel.skusbenavides_skus_fk" FromRole="skus" ToRole="skusbenavides" />
+    <NavigationProperty Name="skusinventarios" Relationship="DB_A3F19C_InventariosModel.skusinventarios_skus_fk" FromRole="skus" ToRole="skusinventarios" />
+  </EntityType>
+  <EntityType Name="skusbenavides">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigobarras" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="skus_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="skus" Relationship="DB_A3F19C_InventariosModel.skusbenavides_skus_fk" FromRole="skusbenavides" ToRole="skus" />
+  </EntityType>
+  <EntityType Name="skusinventarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="qtymanual" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="skus_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="skus" Relationship="DB_A3F19C_InventariosModel.skusinventarios_skus_fk" FromRole="skusinventarios" ToRole="skus" />
+  </EntityType>
+  <EntityType Name="statuslogisticasinversas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="logisticainversa" Relationship="DB_A3F19C_InventariosModel.logisticainversa_statuslogisticasinversas_fk" FromRole="statuslogisticasinversas" ToRole="logisticainversa" />
+  </EntityType>
+  <EntityType Name="statustarimas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tarimas" Relationship="DB_A3F19C_InventariosModel.tarimas_statustarimas_fk" FromRole="statustarimas" ToRole="tarimas" />
+  </EntityType>
+  <EntityType Name="tarimas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Folio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="statustarimas_Id" Type="Int32" Nullable="false" />
+    <Property Name="logisticainversa_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dettarimasskus" Relationship="DB_A3F19C_InventariosModel.dettarimasskus_tarimas_fk" FromRole="tarimas" ToRole="dettarimasskus" />
+    <NavigationProperty Name="logisticainversa" Relationship="DB_A3F19C_InventariosModel.tarimas_logisticainversa_fk" FromRole="tarimas" ToRole="logisticainversa" />
+    <NavigationProperty Name="statustarimas" Relationship="DB_A3F19C_InventariosModel.tarimas_statustarimas_fk" FromRole="tarimas" ToRole="statustarimas" />
+  </EntityType>
+  <EntityType Name="uom">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="skus" Relationship="DB_A3F19C_InventariosModel.skus_uom_fk" FromRole="uom" ToRole="skus" />
+  </EntityType>
+  <Association Name="dettarimasskus_skus_fk">
+    <End Type="DB_A3F19C_InventariosModel.skus" Role="skus" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.dettarimasskus" Role="dettarimasskus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="skus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dettarimasskus">
+        <PropertyRef Name="skus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dettarimasskus_tarimas_fk">
+    <End Type="DB_A3F19C_InventariosModel.tarimas" Role="tarimas" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.dettarimasskus" Role="dettarimasskus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tarimas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dettarimasskus">
+        <PropertyRef Name="tarimas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="logisticainversa_origenlogistica_fk">
+    <End Type="DB_A3F19C_InventariosModel.origenlogistica" Role="origenlogistica" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.logisticainversa" Role="logisticainversa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="origenlogistica">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="logisticainversa">
+        <PropertyRef Name="origenlogistica_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="logisticainversa_statuslogisticasinversas_fk">
+    <End Type="DB_A3F19C_InventariosModel.statuslogisticasinversas" Role="statuslogisticasinversas" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.logisticainversa" Role="logisticainversa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statuslogisticasinversas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="logisticainversa">
+        <PropertyRef Name="statuslogisticasinversas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tarimas_logisticainversa_fk">
+    <End Type="DB_A3F19C_InventariosModel.logisticainversa" Role="logisticainversa" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.tarimas" Role="tarimas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="logisticainversa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tarimas">
+        <PropertyRef Name="logisticainversa_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="skus_uom_fk">
+    <End Type="DB_A3F19C_InventariosModel.uom" Role="uom" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.skus" Role="skus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uom">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="skus">
+        <PropertyRef Name="uom_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="skusbenavides_skus_fk">
+    <End Type="DB_A3F19C_InventariosModel.skus" Role="skus" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.skusbenavides" Role="skusbenavides" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="skus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="skusbenavides">
+        <PropertyRef Name="skus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="skusinventarios_skus_fk">
+    <End Type="DB_A3F19C_InventariosModel.skus" Role="skus" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.skusinventarios" Role="skusinventarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="skus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="skusinventarios">
+        <PropertyRef Name="skus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tarimas_statustarimas_fk">
+    <End Type="DB_A3F19C_InventariosModel.statustarimas" Role="statustarimas" Multiplicity="1" />
+    <End Type="DB_A3F19C_InventariosModel.tarimas" Role="tarimas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statustarimas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tarimas">
+        <PropertyRef Name="statustarimas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

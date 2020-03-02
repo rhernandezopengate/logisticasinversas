@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A3F19C_OpenGateModelStoreContainer" CdmEntityContainer="DB_A3F19C_OpenGateEntities">
+    <EntitySetMapping Name="dettarimasskus">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.dettarimasskus">
+        <MappingFragment StoreEntitySet="dettarimasskus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="tarimas_Id" ColumnName="tarimas_Id" />
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logisticainversa">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.logisticainversa">
+        <MappingFragment StoreEntitySet="logisticainversa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="origenlogistica_id" ColumnName="origenlogistica_id" />
+          <ScalarProperty Name="statuslogisticasinversas_Id" ColumnName="statuslogisticasinversas_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="origenlogistica">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.origenlogistica">
+        <MappingFragment StoreEntitySet="origenlogistica">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nomenclatura" ColumnName="nomenclatura" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skus">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.skus">
+        <MappingFragment StoreEntitySet="skus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="codigobarras" ColumnName="codigobarras" />
+          <ScalarProperty Name="uom_id" ColumnName="uom_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skusbenavides">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.skusbenavides">
+        <MappingFragment StoreEntitySet="skusbenavides">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigobarras" ColumnName="codigobarras" />
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skusinventarios">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.skusinventarios">
+        <MappingFragment StoreEntitySet="skusinventarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="qtymanual" ColumnName="qtymanual" />
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statuslogisticasinversas">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.statuslogisticasinversas">
+        <MappingFragment StoreEntitySet="statuslogisticasinversas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statustarimas">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.statustarimas">
+        <MappingFragment StoreEntitySet="statustarimas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tarimas">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.tarimas">
+        <MappingFragment StoreEntitySet="tarimas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="statustarimas_Id" ColumnName="statustarimas_Id" />
+          <ScalarProperty Name="logisticainversa_Id" ColumnName="logisticainversa_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uom">
+      <EntityTypeMapping TypeName="DB_A3F19C_OpenGateModel.uom">
+        <MappingFragment StoreEntitySet="uom">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

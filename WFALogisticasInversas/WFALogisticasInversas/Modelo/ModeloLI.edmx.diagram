@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5eef78ad133498fbfdd737216b00530" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.dettarimasskus" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.logisticainversa" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.origenlogistica" Width="1.5" PointX="1.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.skus" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.skusbenavides" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.skusinventarios" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.statuslogisticasinversas" Width="1.5" PointX="1.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.statustarimas" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.tarimas" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A3F19C_OpenGateModel.uom" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.dettarimasskus_skus_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.dettarimasskus_tarimas_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.logisticainversa_origenlogistica_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.logisticainversa_statuslogisticasinversas_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.tarimas_logisticainversa_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.skus_uom_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.skusbenavides_skus_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.skusinventarios_skus_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A3F19C_OpenGateModel.tarimas_statustarimas_fk" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

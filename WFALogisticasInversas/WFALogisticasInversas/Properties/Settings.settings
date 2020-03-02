@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WFALogisticasInversas.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DB_A3F19C_OpenGateConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=sql7003.site4now.net;Initial Catalog=DB_A3F19C_OpenGate;Persist Security Info=True;User ID=DB_A3F19C_OpenGate_admin;Password=xQ9znAhU&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=sql7003.site4now.net;Initial Catalog=DB_A3F19C_OpenGate;Persist Security Info=True;User ID=DB_A3F19C_OpenGate_admin;Password=xQ9znAhU</Value>
+    </Setting>
+    <Setting Name="DB_A3F19C_InventariosConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=sql7001.site4now.net;Initial Catalog=DB_A3F19C_Inventarios;Persist Security Info=True;User ID=DB_A3F19C_Inventarios_admin;Password=xQ9znAhU&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=sql7001.site4now.net;Initial Catalog=DB_A3F19C_Inventarios;Persist Security Info=True;User ID=DB_A3F19C_Inventarios_admin;Password=xQ9znAhU</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

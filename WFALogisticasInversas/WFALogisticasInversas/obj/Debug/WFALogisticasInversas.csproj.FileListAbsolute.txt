@@ -1,0 +1,14 @@
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\WFALogisticasInversas.exe.config
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\WFALogisticasInversas.exe
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\WFALogisticasInversas.pdb
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\EntityFramework.dll
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\EntityFramework.xml
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.LogisticaInversa.resources
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.Properties.Resources.resources
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.csproj.GenerateResource.cache
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.csproj.CopyComplete
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.exe
+C:\Users\RubenHernandez\source\repos\WFALogisticasInversas\WFALogisticasInversas\obj\Debug\WFALogisticasInversas.pdb

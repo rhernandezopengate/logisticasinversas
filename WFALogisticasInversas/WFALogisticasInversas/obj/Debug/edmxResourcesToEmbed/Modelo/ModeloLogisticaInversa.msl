@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A3F19C_InventariosModelStoreContainer" CdmEntityContainer="DB_A3F19C_InventariosEntities">
+    <EntitySetMapping Name="dettarimasskus">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.dettarimasskus">
+        <MappingFragment StoreEntitySet="dettarimasskus">
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+          <ScalarProperty Name="tarimas_Id" ColumnName="tarimas_Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logisticainversa">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.logisticainversa">
+        <MappingFragment StoreEntitySet="logisticainversa">
+          <ScalarProperty Name="statuslogisticasinversas_Id" ColumnName="statuslogisticasinversas_Id" />
+          <ScalarProperty Name="origenlogistica_id" ColumnName="origenlogistica_id" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="origenlogistica">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.origenlogistica">
+        <MappingFragment StoreEntitySet="origenlogistica">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nomenclatura" ColumnName="nomenclatura" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skus">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.skus">
+        <MappingFragment StoreEntitySet="skus">
+          <ScalarProperty Name="uom_id" ColumnName="uom_id" />
+          <ScalarProperty Name="codigobarras" ColumnName="codigobarras" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skusbenavides">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.skusbenavides">
+        <MappingFragment StoreEntitySet="skusbenavides">
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+          <ScalarProperty Name="codigobarras" ColumnName="codigobarras" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skusinventarios">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.skusinventarios">
+        <MappingFragment StoreEntitySet="skusinventarios">
+          <ScalarProperty Name="skus_Id" ColumnName="skus_Id" />
+          <ScalarProperty Name="qtymanual" ColumnName="qtymanual" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statuslogisticasinversas">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.statuslogisticasinversas">
+        <MappingFragment StoreEntitySet="statuslogisticasinversas">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statustarimas">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.statustarimas">
+        <MappingFragment StoreEntitySet="statustarimas">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tarimas">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.tarimas">
+        <MappingFragment StoreEntitySet="tarimas">
+          <ScalarProperty Name="logisticainversa_Id" ColumnName="logisticainversa_Id" />
+          <ScalarProperty Name="statustarimas_Id" ColumnName="statustarimas_Id" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uom">
+      <EntityTypeMapping TypeName="DB_A3F19C_InventariosModel.uom">
+        <MappingFragment StoreEntitySet="uom">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
